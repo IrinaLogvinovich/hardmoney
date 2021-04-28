@@ -1,0 +1,120 @@
+.contacts {
+  position: relative;
+}
+
+.contacts__container {
+  // outline: 2px solid red;
+  max-width: 1288px;
+  display: flex;
+  min-height: 900px;
+  position: relative;
+  z-index: 2;
+}
+
+.contacts__form-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 62.66%;
+}
+
+.contacts__form {
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid #31331A;
+  box-sizing: border-box;
+  border-radius: 24px;
+  width: 100%;
+  max-width: 720px;
+  min-height: 400px;
+  position: relative;
+  z-index: 4;
+}
+
+.contacts__content {
+  width: 37.34%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contacts__title {
+  width: 100%;
+  margin-top: auto;
+  max-width: 342px;
+  font-weight: normal;
+  font-size: 70px;
+  line-height: 100%;
+  font-family: $font-title;
+  margin-bottom: 24px;
+}
+
+.contacts__caption {
+  margin-bottom: auto;
+  margin-top: 40px;
+  max-width: 342px;
+  padding-right: 20px;
+  font-size: 22px;
+  line-height: 25px;
+  opacity: 0.8;
+}
+
+.contacts__description {
+  margin-bottom: 40px;
+  margin-top: 0;
+  max-width: 342px;
+  padding-right: 20px;
+  font-size: 22px;
+  line-height: 25px;
+  opacity: 0.8;
+}
+
+.contacts__link {
+  width: 100%;
+  max-width: 343px;
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 100%;
+  font-family: $font-title;
+  text-decoration: none;
+}
+
+.contacts__decor {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  background-color: skyblue;
+}
+
+.contacts__color {
+  width: calc(50vw + 140px);
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top:0;
+    right:0;
+    width: 100%;
+    height: 100%;
+    background: conic-gradient(from 180deg at 50% 50%, #D7FF01 0deg, #FAFF01 360deg);
+    animation-name: rotateScale;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+}
+
+.contacts__empty {
+  width: calc(50vw - 140px);
+  background-color: white;
+}
+
+

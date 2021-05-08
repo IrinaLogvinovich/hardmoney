@@ -2,6 +2,11 @@
   margin-top: -54px;
   position: relative;
   z-index: 3;
+
+  @media(max-width: 1250px) {
+    padding: 0 20px;
+    margin-top: -24px;
+  }
 }
 
 .advantages__container {
@@ -23,6 +28,11 @@
     opacity: 0.08;
     filter: blur(50px);
   }
+
+  @media(max-width: 1250px) {
+    padding: 10px;
+    border-radius: 24px;
+  }
 }
 
 .advantages__item {
@@ -32,6 +42,17 @@
   display: flex;
   flex-direction: column;
 
+  @media(max-width: 1250px) {
+    padding: 20px;
+    min-height: 252px;
+  }
+
+  @media(max-width: 767px) {
+    min-height: 234px;
+    padding: 12px 12px;
+    border-radius: 18px;
+  }
+
   & h3 {
     font-family: $font-title;
     font-weight: normal;
@@ -39,6 +60,15 @@
     line-height: 29px;
     margin-top: 0;
     margin-bottom: 14px;
+
+    @media(max-width: 1250px) {
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+    @media(max-width: 767px) {
+      margin-bottom: 8px;
+    }
   }
 
   & p {
@@ -47,11 +77,21 @@
     line-height: 150%;
     color: var(--gray);
     margin-bottom: 70px;
+
+    @media(max-width: 1250px) {
+      font-size: 14px;
+      margin-bottom: 0;
+    }
   }
 
-  & img {
+  & svg {
     margin-top: auto;
-    align-self: flex-start
+    align-self: flex-start;
+
+    @media(max-width: 1250px) {
+      width: 40px;
+      height: auto;
+    }
   }
 }
 
@@ -60,4 +100,16 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 12px;
+
+  @media(max-width: 1250px) {
+    gap: 10px;
+  }
+
+  @media(max-width: 1023px) {
+    gap: 4px;
+  }
+
+  @media(max-width: 767px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }

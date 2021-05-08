@@ -20,16 +20,51 @@ html {
   font-weight: normal;
   font-family: $font;
   overflow-x: hidden;
-  background-color: #F9F9F9;
+
   color: var(--text);
 
+  counter-reset: section;
+
   --text: #202020;
-  --green: #97E11D;
+  --change-text: #202020;
+  --current-color: #97E11D;
   --gray: #606060;
+  --start-color: #D7FF01;
+  --second-color: #FAFF01;
+
+
 }
 
 .page-body--overflow {
     overflow: hidden;
+}
+
+.page-body--contacts {
+  background-color: white;
+}
+
+.svg-fill {
+  fill: var(--current-color);
+}
+
+.svg-stroke {
+  stroke: var(--current-color);
+}
+
+.svg-fill-start {
+  fill: var(--start-color);
+}
+
+.svg-fill-second {
+  fill: var(--second-color);
+}
+
+.svg-start-color {
+  stop-color: var(--start-color);
+}
+
+.svg-second-color {
+  stop-color: var(--second-color);
 }
 
 a {

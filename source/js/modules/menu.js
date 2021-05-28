@@ -30,11 +30,15 @@ function setProps() {
     duration: 0.5
   });
 
-  gsap.to('.page-body--contacts .header__phone-link', {
-    color: '#f9f9f9',
-    delay: 1,
-    duration: 0.5
-  });
+  if (document.querySelector('.page-body--contacts .header__phone-link')) {
+    gsap.to('.page-body--contacts .header__phone-link', {
+      color: '#f9f9f9',
+      delay: 1,
+      duration: 0.5
+    });
+  }
+
+  document.querySelector('.header__menu-item:last-child a').style = 'color: #f9f9f9';
 
   burgerButton.style.display = 'none';
   closeButton.style.display = 'block';
@@ -42,6 +46,9 @@ function setProps() {
 
 function removeProps(){
   document.querySelector('.header__nav').style.display = 'none';
+
+  document.querySelector('.header__menu-item:last-child a').style = '';
+
   gsap.to('.header__nav', {
     clearProps: 'all'
   });
@@ -76,7 +83,6 @@ closeButton.addEventListener('click', function(){
 
 window.addEventListener('resize', function(evt){
   if (window.innerWidth > 767) {
-    console.log('сработка');
     removeProps();
   }
 });

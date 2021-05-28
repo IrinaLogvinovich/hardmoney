@@ -6,7 +6,6 @@ if (Canvas) {
   let resize = function() {
       Canvas.width = Canvas.clientWidth;
       Canvas.height = Canvas.clientHeight;
-      console.log('resize')
   };
   window.addEventListener('resize', resize);
   resize();

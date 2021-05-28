@@ -10,9 +10,15 @@
 
 .form__decor-container {
   @include center;
-  width: 1000%;
-  height: 1000%;
-  background-color: skyblue;
+  width: 200vw;
+  height: 200vw;
+
+  @media(max-width: 767px) {
+    width: 200vw;
+    height: 200vw;
+
+  }
+
 
   & .form__decor-color {
     position: absolute;
@@ -21,6 +27,7 @@
     width: 100%;
     height: 100%;
     background: conic-gradient(from 180deg at 50% 50%, var(--start-color) 0deg, var(--second-color) 360deg);
+    animation: rotate 20s linear infinite;
   }
 }
 

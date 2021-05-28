@@ -64,9 +64,15 @@
 
 .promo__decor-container {
   @include center;
-  width: 1000%;
-  height: 1000%;
-  background-color: skyblue;
+  width: 200vw;
+  height: 200vw;
+  // overflow: hidden;
+  // background: conic-gradient(from 180deg at 50% 50%, var(--start-color) 0deg, var(--second-color) 360deg);
+
+  @media(max-width: 767px) {
+    width: 200vw;
+    height: 200vw;
+  }
 
   & .promo__decor-color {
     position: absolute;
@@ -75,7 +81,13 @@
     width: 100%;
     height: 100%;
     background: conic-gradient(from 180deg at 50% 50%, var(--start-color) 0deg, var(--second-color) 360deg);
+    animation: rotate 20s linear infinite;
   }
+}
+
+@keyframes rotate {
+  from { transform: rotate(0); }
+  to { transform: rotate(360deg) }
 }
 
 .promo__title {
@@ -156,6 +168,7 @@
     height: 80px;
     background: conic-gradient(from 180deg at 50% 50%, #000000 0deg, #5B5B5B 360deg);
     border-radius: 50%;
+    animation: rotate 20s linear infinite;
   }
 
   &::before {
@@ -239,6 +252,9 @@
 
 .promo__about {
   margin-top: 116px;
+  position: relative;
+  width: 100%;
+  max-width: 424px;
 
   @media(max-width: 1250px) {
     width: calc(100% - 20px);
@@ -250,6 +266,20 @@
     margin: 84px auto 14px auto;
     width: 190px;
   }
+}
+
+.promo__back-image {
+  position: absolute;
+  top: 15.2%;
+  // left: 3px;
+  width: 100%;
+  height: auto;
+}
+
+.promo__about-image {
+  width: 100%;
+  height: auto;
+
 }
 
 .promo__about-content {

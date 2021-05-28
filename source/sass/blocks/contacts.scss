@@ -24,17 +24,35 @@
   width: 62.66%;
 }
 
-.contacts__form {
+.contacts form {
   box-sizing: border-box;
   border-radius: 24px;
   width: 100%;
-  max-width: 640px;
+  // max-width: 640px;
   position: relative;
   z-index: 4;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   padding: 52px 40px 28px 40px;
+
+  & br {
+    display: none;
+  }
+
+  & p {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  & .ajax-loader {
+    display: none;
+  }
+
+  & .wpcf7-not-valid-tip {
+    display: none;
+  }
 
   @media(max-width: 767px) {
     flex-direction: column;
@@ -218,9 +236,14 @@
 
 .contacts__color-container {
   @include center;
-  width: 1000%;
-  height: 1000%;
-  background-color: skyblue;
+  width: 200vw;
+  height: 200vw;
+
+
+  @media(max-width: 767px) {
+    width: 200vw;
+    height: 200vw;
+  }
 
   & .contacts__item-color {
     position: absolute;
@@ -229,6 +252,7 @@
     width: 100%;
     height: 100%;
     background: conic-gradient(from 180deg at 50% 50%, var(--start-color) 0deg, var(--second-color) 360deg);
+    animation: rotate 20s linear infinite;
   }
 }
 .contacts__right-side-form {
@@ -274,6 +298,7 @@
   color: #232323;
   opacity: 0.8;
   margin-bottom: 19px;
+  width: 100%;
 
   &::placeholder {
     color: #cacaca;
@@ -295,13 +320,14 @@
   background: transparent;
   padding: 13px;
   resize: none;
-  min-height: 120px;
+  height: 120px;
   font-family: inherit;
   font-weight: bold;
   font-size: 12px;
   line-height: 13px;
   color: #232323;
   opacity: 0.8;
+  width: 100%;
 
   &::placeholder {
     color: #cacaca;
@@ -310,7 +336,7 @@
 
 .contacts__submit {
   margin-top: 18px;
-  width: 100%;
+  width: 300px;
   min-height: 40px;
   max-width: 300px;
   background-color: var(--text);
@@ -339,10 +365,19 @@
 
   @media(max-width: 767px) {
     max-width: 100%;
+    width: 100%;
     margin-bottom: 20px;
   }
 }
 
 .page-body--contacts .contacts{
   margin-top: 30px;
+}
+
+.cf7sg-container.cf7sg-not-grid {
+  max-width: 100%;
+}
+
+.wpcf7-response-output {
+  display: none;
 }

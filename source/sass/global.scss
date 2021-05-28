@@ -84,3 +84,18 @@ a {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+a:hover {
+  transition: opacity 0.4s;
+  opacity: 0.8;
+}
+
+button:hover {
+  transition: opacity 0.4s;
+  opacity: 0.8;
+}
+
+input[type=submit]:hover {
+  transition: opacity 0.4s;
+  opacity: 0.8;
+}
